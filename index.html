@@ -262,44 +262,10 @@
         color: #acacac;
         margin: 5px;
       }
+
       @media only screen and (max-width: 600px) {
         .container {
           width: 100%;
-        }
-        .container .btn #listen-btn {
-          padding: 20px 40px;
-          font-size: 18px;
-          letter-spacing: 8px;
-        }
-        .container .para #first-para {
-          font-size: 16px;
-        }
-        .container .para #sec-para {
-          font-size: 14px;
-        }
-
-        .container .First-Picture img {
-          min-height: 250px;
-        }
-        .card-title h1 {
-          max-width: 350px;
-          word-break: break-word;
-          font-size: 20px;
-        }
-        .cards {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        .cards .card img {
-          height: 200px;
-        }
-        .cards .card p {
-          max-width: 150px;
-          font-size: 14px;
-        }
-      }
-      @media only screen and (max-width: 390px) {
-        .container {
-          padding: 10px;
         }
         .container .titles {
           padding: 0 10px;
@@ -313,7 +279,7 @@
           letter-spacing: 1.4px;
         }
         .container .Ep-title {
-          font-size: 20px;
+          font-size: 22px;
         }
         .container .First-Picture {
           margin-top: 30px;
@@ -345,19 +311,37 @@
           font-size: 16px;
         }
         .card-title h1 {
-          max-width: 300px;
+          max-width: 400px;
           word-break: break-word;
-          font-size: 18px;
+          font-size: 25px;
         }
+        .cards {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
         .cards .card {
-          margin-bottom: 15px;
+          margin-bottom: 20px;
         }
         .cards .card img {
-          height: 150px;
+          width: 50%;
+          height: 200px;
+          object-fit: cover;
+          object-position: center;
         }
         .cards .card p {
           max-width: 130px;
           font-size: 13px;
+        }
+      }
+      @media only screen and (max-width: 390px) {
+        .container .sec-title {
+          font-size: 18px;
+          letter-spacing: 1.2px;
+        }
+        .container .btn #listen-btn {
+          padding: 25px 40px;
+          font-size: 20px;
+          letter-spacing: 10px;
         }
       }
     </style>
