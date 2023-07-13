@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karriery</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 600px;
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .container .titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .container .first-title {
+        color: #acacac;
+        font-size: 10px;
+        line-height: 1.5;
+        flex-wrap: nowrap;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 0;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+      }
+
+      .container .sec-title {
+        display: inline-block;
+        position: relative;
+        color: #262e2e;
+        font-size: 28px;
+        margin-bottom: 10px;
+        font-family: MONTSERRAT, sans-serif;
+        font-weight: 900;
+        letter-spacing: 1.8px;
+      }
+      .container .sec-title::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 2px;
+        background-color: #e81a41;
+      }
+
+      .container .Ep-title {
+        color: #262e2e;
+        font-size: 25px;
+        margin-bottom: 10px;
+        font-family: MONTSERRAT, sans-serif;
+        font-weight: 800;
+        letter-spacing: 1.8px;
+      }
+      .container .First-Picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .container .First-Picture img {
+        width: 100%;
+        height: 300px;
+        min-height: 300px;
+        object-fit: cover;
+        object-position: center;
+      }
+      .container .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        position: relative;
+        margin-bottom: 50px;
+      }
+      .container .btn a {
+        text-decoration: none;
+      }
+      .container .btn #listen-btn {
+        display: inline-block;
+        padding: 15px 25px;
+        background-color: #262e2e;
+        color: #fff;
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
+        letter-spacing: 1.8px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+      .container .btn #listen-btn:hover {
+        background-color: #e81a41;
+      }
+      .container .btn::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 2px;
+        background-color: #e81a41;
+      }
+      .para #first-para {
+        width: 100%;
+        color: #262e2e;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 35px;
+      }
+
+      .para #first-para #first-span {
+        font-size: 28px;
+        font-family: MONTSERRAT, sans-serif;
+        font-weight: bold;
+      }
+      .para #sec-para {
+        width: 100%;
+        color: #262e2e;
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 35px;
+      }
+      .para #sec-para #sec-span {
+        font-size: 20px;
+        font-family: MONTSERRAT, sans-serif;
+        font-weight: 900;
+      }
+      .card-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        position: relative;
+        font-family: MONTSERRAT, sans-serif;
+        font-weight: 900;
+      }
+      .cards {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+      }
+
+      .cards .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cards .card img {
+        width: 100%;
+        min-height: 150px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .cards .card p {
+        color: #262e2e;
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 15px;
+        text-align: center;
+        max-width: 200px;
+        font-weight: 600;
+      }
+      .cards .card a {
+        text-decoration: none;
+      }
+      .cards .card #link-p {
+        color: #262e2e;
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 15px;
+        text-align: center;
+        max-width: 200px;
+        font-weight: 600;
+        position: relative;
+      }
+      .cards .card #link-p::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 2px;
+        background-color: #e81a41;
+      }
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        position: relative;
+        flex-direction: column;
+      }
+      .footer-sm-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer-sm-links a {
+        text-decoration: none;
+        color: #262e2e;
+        font-size: 15px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 15px;
+        text-align: center;
+        max-width: 200px;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+      .footer .desc {
+        width: 100%;
+        color: #acacac;
+        font-size: 11px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 15px;
+        text-align: center;
+        font-weight: 600;
+      }
+      .footer .footer-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer .footer-links a {
+        color: #1bb0b0;
+        cursor: pointer;
+        margin: 5px;
+      }
+      .footer .footer-links p {
+        color: #acacac;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="titles">
+        <p class="first-title">a podcast by</p>
+        <h1 class="sec-title">Halim &amp; Chadi</h1>
+        <h1 class="Ep-title">Episode 55: Karriery Lorem</h1>
+      </div>
+      <div class="First-Picture">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiP_zGnqdL_yDYmI31ETnmQoplTPkXL2rbnA&usqp=CAU"
+          alt="First-Picture"
+        />
+      </div>
+      <div class="btn">
+        <a href="#"><button id="listen-btn">Listen now</button></a>
+      </div>
+      <div class="para">
+        <p id="first-para">
+          To celebrate <span id="first-span"> Women's Equality Day,</span>
+          Gina & Jill together with their guests will be talking about the
+          history of this day, its impact on the present, and the biggest issues
+          that concern not just women but society everywhere
+        </p>
+        <p id="sec-para">
+          <span id="sec-span"> Women's Equality Day</span> is celebrated in the
+          United States on August 26 to commemorate the 1920 adoption of the
+          Nineteenth Amendment (Amendment XIX) to the United States
+          Constitution, which prohibits the states and the federal government
+          from denying the right to vote to citizens of the United States on the
+          basis of sex. It was first celebrated in 1971, designated by Congress
+          in 1973, and is proclaimed each year by the United States President.
+        </p>
+      </div>
+      <div class="card-title">
+        <h1>Episode 55: Karriery Lorem</h1>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiP_zGnqdL_yDYmI31ETnmQoplTPkXL2rbnA&usqp=CAU"
+            alt="First-Picture"
+          />
+          <p>Episode 23: Lorem Lorem ipsum</p>
+          <a href="#"><p id="link-p">Listen To episode ></p></a>
+        </div>
+        <div class="card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiP_zGnqdL_yDYmI31ETnmQoplTPkXL2rbnA&usqp=CAU"
+            alt="Second-Picture"
+          />
+          <p>Episode 24: Sed do eiusmod temp magna aliqua</p>
+
+          <a href="#"><p id="link-p">Listen To episode ></p></a>
+        </div>
+        <div class="card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiP_zGnqdL_yDYmI31ETnmQoplTPkXL2rbnA&usqp=CAU"
+            alt="Third-Picture"
+          />
+          <p>Episode 25: Lorem ipsum dolor sit amet</p>
+
+          <a href="#"><p id="link-p">Listen To episode ></p></a>
+        </div>
+        <!-- Add more cards here as needed -->
+      </div>
+      <div class="footer">
+        <div class="footer-sm-links">
+          <a href="#"
+            ><img
+              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/facebook@2x.png"
+              width="32"
+              height="32"
+              alt="Facebook"
+              title="facebook"
+              style="display: block; height: auto; border: 0"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/twitter@2x.png"
+              width="32"
+              height="32"
+              alt="Twitter"
+              title="twitter"
+              style="display: block; height: auto; border: 0"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/linkedin@2x.png"
+              width="32"
+              height="32"
+              alt="Linkedin"
+              title="linkedin"
+              style="display: block; height: auto; border: 0"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/instagram@2x.png"
+              width="32"
+              height="32"
+              alt="Instagram"
+              title="instagram"
+              style="display: block; height: auto; border: 0"
+          /></a>
+        </div>
+        <div class="desc">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
+            similique facere placeat quisquam id quas recusandae distinctio ipsa
+            numquam, neque, suscipit
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Contact</a>
+          <p>|</p>
+          <a href="#">Lorem</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
