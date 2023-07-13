@@ -267,15 +267,15 @@
           width: 100%;
         }
         .container .btn #listen-btn {
-          padding: 25px 40px;
-          font-size: 20px;
-          letter-spacing: 10px;
+          padding: 20px 40px;
+          font-size: 18px;
+          letter-spacing: 8px;
         }
         .container .para #first-para {
-          font-size: 18px;
+          font-size: 16px;
         }
         .container .para #sec-para {
-          font-size: 16px;
+          font-size: 14px;
         }
 
         .container .First-Picture img {
@@ -284,21 +284,80 @@
         .card-title h1 {
           max-width: 350px;
           word-break: break-word;
+          font-size: 20px;
         }
         .cards {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        .cards .card {
-          margin-bottom: 20px;
+          grid-template-columns: repeat(2, 1fr);
         }
         .cards .card img {
-          width: 50%;
           height: 200px;
-          object-fit: cover;
-          object-position: center;
         }
         .cards .card p {
-          max-width: 350px;
+          max-width: 150px;
+          font-size: 14px;
+        }
+      }
+      @media only screen and (max-width: 390px) {
+        .container {
+          padding: 10px;
+        }
+        .container .titles {
+          padding: 0 10px;
+        }
+        .container .first-title {
+          font-size: 8px;
+          letter-spacing: 6px;
+        }
+        .container .sec-title {
+          font-size: 22px;
+          letter-spacing: 1.4px;
+        }
+        .container .Ep-title {
+          font-size: 20px;
+        }
+        .container .First-Picture {
+          margin-top: 30px;
+        }
+        .container .First-Picture img {
+          min-height: 200px;
+        }
+        .container .btn {
+          margin-top: 15px;
+          margin-bottom: 30px;
+        }
+        .container .btn #listen-btn {
+          padding: 15px 30px;
+          font-size: 14px;
+          letter-spacing: 5px;
+        }
+        .para #first-para {
+          font-size: 16px;
+          margin-bottom: 25px;
+        }
+        .para #first-para #first-span {
+          font-size: 24px;
+        }
+        .para #sec-para {
+          font-size: 14px;
+          margin-bottom: 25px;
+        }
+        .para #sec-para #sec-span {
+          font-size: 16px;
+        }
+        .card-title h1 {
+          max-width: 300px;
+          word-break: break-word;
+          font-size: 18px;
+        }
+        .cards .card {
+          margin-bottom: 15px;
+        }
+        .cards .card img {
+          height: 150px;
+        }
+        .cards .card p {
+          max-width: 130px;
+          font-size: 13px;
         }
       }
     </style>
